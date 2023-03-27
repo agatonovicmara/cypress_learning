@@ -23,6 +23,7 @@ describe('Radio Btns and Checkboxes interactions', () =>{
         cy.visit('https://itera-qa.azurewebsites.net/home/automation')
         cy.get('#monday').should('be.visible')
         cy.get('#monday').check().should('be.checked')
+        cy.get('.form-check-input').last().check()
 
         cy.get('#monday').uncheck().should('not.be.checked')
 
